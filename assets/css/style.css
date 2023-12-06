@@ -1,0 +1,148 @@
+body {
+    color: #414141 !important;
+    font-family: 'Crimson Pro', serif !important;
+    background-color: #fefefe;
+}
+
+a {
+    color: #043361 !important;
+    text-decoration: none;
+    transition: all ease 0.25s;
+}
+
+p {
+    font-size: 16px;
+    color: #6c757d !important;
+    margin-bottom: 0;
+}
+
+a:hover {
+    color: #043361 !important;
+    text-decoration: underline;
+}
+
+.user-blog a,
+.user-publications a {
+    color: #39c !important;
+}
+
+.user-blog a:hover,
+.user-publications a:hover {
+    color: #069 !important;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #043361 !important;
+    margin-bottom: 12px;
+    user-select: none;
+}
+
+.user-avatar img {
+    width: 80px;
+    height: 80px;
+}
+
+.date {
+    color: #043361 !important;
+}
+
+li {
+    color: #043361;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 3rem 1rem 1rem 1rem;
+}
+
+.social-icons a {
+    font-size: 18px;
+    color: #043361 !important;
+    margin: 0.8rem;
+}
+
+.social-icons a:hover {
+    text-decoration: none;
+}
+
+.social-icons a:hover > i,
+.social-icons a:hover > svg {
+    transform: scale(1.1) !important;
+}
+
+.contact li {
+    color: #414141;
+}
+
+.social-icons a:hover {
+    color: rgb(25, 125, 175);
+}
+
+.education li {
+    color: #043361;
+}
+
+p.email {
+    font-family: 'Ubuntu Mono', monospace; 
+    font-size: 14px;
+    line-height: 28px;
+}
+
+.interests li span {
+    color: #6c757d !important;
+}
+
+.user-publications .actions a {
+    color: #6c757d !important;
+    border: 1px solid #6c757d;
+    padding: 3px 5px;
+    font-size: 13px;
+    border-radius: 2px;
+    user-select: none;
+}
+
+.user-publications .actions a:hover {
+    text-decoration: none;
+    border-color: #069;
+    color: #069 !important;
+}
+
+.user-projects li a,
+.user-talks li a {
+    user-select: none;
+    color: #39c !important;
+}
+
+.user-projects li a:hover,
+.user-talks li a:hover {
+    color: #069 !important;
+}
+
+@media only screen and (min-width: 992px) {
+    .left-side {
+        height: 100%;
+        width: 330px;
+        position: fixed;
+        left: auto;
+        z-index: 1;
+        overflow-x: hidden;
+    }
+    
+    .right-side {
+        margin-left: 330px;
+        width: fit-content;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+::-moz-selection {
+    color: #fff;
+    background: #39c;
+}
+  
+::selection {
+    color: #fff;
+    background: #39c;
+}
