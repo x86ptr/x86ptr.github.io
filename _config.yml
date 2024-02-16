@@ -1,0 +1,25 @@
+title: Mehdi Karimi's Blog
+url: https://x86ptr.github.io
+baseurl: ""
+lang: en
+description: Mehdi Karimi, x86ptr, operating systems, windows internals, reverse engineering, fuzzing, symbolic execution, vulnerability research, binary exploitation, kernel programming.
+related_post_isactive: true
+github_discussions_isactive: true
+
+author:
+  name: Mehdi Karimi
+  affiliation: B.Sc in Computer Engineering Student
+  bio: System Security Researcher
+  email: x86ptr@gmail.com
+
+papers:
+  - title: A Comprehensive Survey of Code Reuse Attacks and Defense Mechanisms
+    authors: M. Karimi, M.A. Assari
+    journal: Cybersecurity
+    year: 2024
+    link: http://127.0.0.1:4000/publications/
+    note: Coming Soon
+
+projects:
+
+talks:

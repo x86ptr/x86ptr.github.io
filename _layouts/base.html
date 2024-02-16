@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='{{ page.lang | default: site.lang | default: "en" }}'>
+	<head>
+		{% if page.title %}
+			<title>{{ page.title | escape }}</title>
+		{% else %}
+			<title>Mehdi Karimi's Blog</title>
+		{% endif %}
+		<title>{{ page.title | escape }}</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="{{ site.description }}">
+		<link rel="apple-touch-icon" sizes="180x180" href="{{ relative_url }}/assets/images/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="{{ relative_url }}/assets/images/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="{{ relative_url }}/assets/images/favicon/favicon-16x16.png">
+		<link rel="manifest" href="{{ relative_url }}/assets/images/favicon/site.webmanifest">
+		<link rel="stylesheet" href="{{ relative_url }}/assets/css/style.css">
+		<!-- Highlight JS Style -->
+		<link rel="stylesheet" type="text/css" href="https://unpkg.com/@highlightjs/cdn-assets@11.4.0/styles/github-dark.min.css"/>
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Exo:wght@500&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&amp;display=swap" rel="stylesheet" >
+		<!-- Fontawesome CSS v6.4.2 -->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+		<!-- Academic Icon Pack -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
+	</head>
+	<body>
+		{% include header.html %}
+		{% for category in site.data.categories %}
+		---
+		layout: category
+		title: {{ category.title }}
+		category: {{ category.category }}
+		permalink: {{ category.permalink }}
+		---
+	  {% endfor %}
+	  
+   
+		<main class="page-content" aria-label="Content">
+			<div class="wrapper">
+				{{ content }}
+			</div>
+		</main>
+		{% include footer.html %}
+		<!-- Jquery -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<!-- Fontawesome JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.js"></script>
+		<!-- Highlight JS -->
+		<script src="{{ relative_url }}/assets/highlight/highlight.js"></script>
+		<script src=" https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js "></script>
+		<!-- Simple Jekyll Search -->
+		<script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+		<!-- Main JS -->
+		<script src="{{ relative_url }}/assets/js/script.js"></script>
+	</body>
+</html>

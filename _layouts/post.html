@@ -1,0 +1,138 @@
+---
+layout: base
+---
+
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="post-header">
+        <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+        <div class="post-meta">
+            <div class="post-author">
+                <a href="/about" class="author-url">
+                    <img src="/assets/images/avatar.jpg" alt="x86ptr" width="27" height="27" style="margin-right: 8px; border-radius: 5px; margin-top: -2px;">
+                </a>
+                {%- if page.author -%}
+                    Written by 
+                    <span itemprop="author">
+                        <span class="p-author h-card" itemprop="name">
+                            <a href="/about">{{ page.author }}</a>
+                        </span>
+                    </span>
+                    |
+                {%- endif -%}
+            </div>
+            <div class="post-date">
+                {%- if page.modified_date -%}
+                    Last updated 
+                    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                    <time class="dt-modified" datetime="{{ page.modified_date | date_to_xmlschema }}" itemprop="dateModified">
+                        {{ page.modified_date | date: date_format }}
+                    </time>
+                {% else %}
+                    Posted at
+                    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                    <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                        {{ page.date | date: date_format }}
+                    </time>
+                {%- endif -%}
+            </div>
+            <div class="post-categories">
+                <i class="fa fa-folder-open" style="margin-right: 5px;"></i>
+                {%- for category in page.categories -%}
+                    {% assign category_slug = category | replace: ' ', '_' | downcase %}
+                    <a href="/category/{{ category_slug }}/">
+                        <span class="post-category">{{ category }}</span>
+                    </a>
+                {%- endfor -%}
+            </div>
+        </div>
+    </header>
+    <div class="introduction">
+        <h1>Introduction</h1>
+        <p>{{ page.introduction }}</p>
+    </div>
+    <div class="post-content e-content" itemprop="articleBody">
+        {{ content }}
+    </div>
+    <div class="post-tags">
+        <i class="fa fa-tags" style="margin-right: 5px;"></i>
+        {%- for tag in page.tags -%}
+            <a href="/tag/{{ tag }}/">
+                <span class="post-tag">{{ tag }}</span>
+            </a>
+        {%- endfor -%}
+    </div>
+    <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+    <div class="post-footer">
+        <div class="share-buttons">
+            <span style="margin-right: 5px;">Share: </span>
+            <button class="share-button linkedin">
+                <i class="fab fa-linkedin"></i>
+            </button>
+            <button class="share-button telegram">
+                <i class="fab fa-telegram"></i>
+            </button>
+            <button class="share-button facebook">
+                <i class="fab fa-facebook-f"></i>
+            </button>
+            <button class="share-button twitter">
+                <i class="fab fa-twitter"></i>
+            </button>
+            <button class="share-button reddit">
+                <i class="fab fa-reddit"></i>
+            </button>
+        </div>
+        {% if site.related_post_isactive == true %}
+            <div style="margin-top: 40px;">
+                <h2>Related Posts</h2>
+            </div>
+            <div class="related-post">
+                {% for post in site.related_posts limit:3 %}
+                    <a href="{{ post.url }}">
+                    <div class="post">
+                        <p>{{ post.date | date_to_string }}</p>
+                        <h1>{{ post.title }}</h1>
+                        <p>{{ post.introduction | strip_html | truncate: 90 }}</p>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        {% endif %}
+        <div class="pagination">
+            {% if page.previous.url %}
+                <a class="pagination-item prev" href="{{page.previous.url}}" title="{{page.previous.title}}"><i class="fas fa-angle-left"></i> Previous</a>
+            {% else %}
+                <span class="pagination-item pagination-disabled prev"><i class="fas fa-angle-left"></i> Previous</span>
+            {% endif %}
+            {% if page.next.url %}
+                <a class="pagination-item next" href="{{page.next.url}}" title="{{page.next.title}}">Next <i class="fas fa-angle-right"></i></a>
+            {% else %}
+                <span class="pagination-item pagination-disabled next">Next <i class="fas fa-angle-right"></i></span>
+            {% endif %}
+        </div>
+    </div>
+    {% if site.github_discussions_isactive == true %}
+        {% if page.comments == true %}
+            <div class="comments">
+                <script src="https://giscus.app/client.js"
+                        data-repo="x86ptr/x86ptr.github.io"
+                        data-repo-id="R_kgDOLEU_xw"
+                        data-category="General"
+                        data-category-id="DIC_kwDOLEU_x84CcZJ8"
+                        data-mapping="url"
+                        data-strict="0"
+                        data-reactions-enabled="1"
+                        data-emit-metadata="0"
+                        data-input-position="bottom"
+                        data-theme="light"
+                        data-lang="en"
+                        crossorigin="anonymous"
+                        async>
+                </script>
+            </div>
+        {% endif %}
+    {% endif %}
+</article>
+  
+<a id="scroll-to-top">
+    <i class="fas fa-angle-up"></i>
+</a>

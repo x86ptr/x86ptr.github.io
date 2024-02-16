@@ -1,0 +1,22 @@
+---
+layout: category
+category: programming
+permalink: /category/programming/
+title: Programming
+---
+            <div id="archives">
+              {% for post in site.posts %}
+                <div class="archive-group">
+                  <div class="archive_head">
+                    <i class="fa fa-folder-open"></i>
+                    <span>{{ page.title }}</span>
+                  </div>
+                  {% if post.categories contains 'Programming' %}
+                    <article class="archive-item">
+                      <span><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></span>
+                      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                    </article>
+                  {% endif %}
+                </div>
+              {% endfor %}
+            </div>

@@ -1,0 +1,43 @@
+<header>
+    <div class="wrapper" >
+        <nav class="navbar">
+            <div class="topnav" id="myTopnav">
+                <a class="nav-logo" style="margin-right: 10px; font-size: 20px;" href="/">
+                    <span style="color: rgb(23, 122, 23)">x86</span><span style="color: #cf1f68;">ptr</span>
+                </a>
+                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/blog">Blog</a>
+                <a class="nav-link" href="/publications">Publications</a>
+                <a class="nav-link" href="/projects">Projects</a>
+                <a class="nav-link" href="/talks">Talks</a>
+                <a class="nav-link" href="/about">About</a>
+                <a href="javascript:void(0);" class="icon" id="menuIcon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+            {% if page.url == "/" %}
+                <a class="github-icon" style="font-size: 18px;" href="https://github.com/x86ptr" target="_blank" title="github">
+                    <i class="fab fa-github"></i>
+                </a>
+            {% else %}
+                <button class="search-icon" type="button" id="open-modal" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <i class="fa fa-search"></i>
+                </button>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <h2>Search</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="search">
+                                <input type="text" id="search-input" placeholder="Search blog posts..">
+                                <div id="results-container"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </nav>
+    </div>
+</header>

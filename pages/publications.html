@@ -1,0 +1,28 @@
+---
+layout: page
+title: Publications
+permalink: /publications/
+---
+
+
+<div class="publications">
+    {% assign sorted_papers = site.papers | sort:"year" | reverse %}
+    {% for paper in sorted_papers %}
+        <div class="paper">
+            <div class="info">
+                <h1 class="title"><a href="{{ paper.link }}">{{ paper.title }}</a>, <span class="year">{{ paper.year }}</span> 
+                    {% if paper.note %}<span class="note">[{{ paper.note }}]</span>{% endif %}
+                </h1>
+                <div class="authors"><span>Authors:</span> {{ paper.authors }}</div>
+                <div class="journal"><span>Journal/Conference:</span> {{ paper.journal }}</div>
+            </div>
+            <div class="action">
+                <a class="pdf" href="">PDF</a>
+                <a class="slides" href="">Slides</a>
+                <a class="endnote" href="">EndNote</a>
+                <a class="doi" href="">DOI</a>
+                <a class="doi" href="">Google Scholar</a>
+            </div>
+        </div>
+    {% endfor %}
+</div>
