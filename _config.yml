@@ -3,8 +3,6 @@ url: https://x86ptr.github.io
 baseurl: ""
 lang: en
 description: Mehdi Karimi, x86ptr, operating systems, windows internals, reverse engineering, fuzzing, symbolic execution, vulnerability research, binary exploitation, kernel programming.
-related_post_isactive: true
-github_discussions_isactive: true
 
 author:
   name: Mehdi Karimi
