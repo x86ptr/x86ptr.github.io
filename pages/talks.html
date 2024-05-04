@@ -1,0 +1,40 @@
+---
+layout: page
+title: Talks
+permalink: /talks/
+---
+
+<section class="talks">
+    <h1 class="font-semibold text-lg text-center">Talks</h1>
+    <p class="text-center text-[0.98rem] text-gray-500 mt-1">Below you'll find talks and presentations I've delivered.</p>
+    <div class="mt-8">
+        <div class="list space-y-4">
+            {% for talk in site.talks %}
+            <div class="flex flex-row">
+                <div class="justify-center text-[1.4rem] -mt-[0.32rem] mr-2">•</div>
+                <div>
+                    <p>
+                        {{ talk.subject }}. <a href="{{ talk.homepage }}">{{ talk.conference }}</a>, {{ talk.location }}. {{ talk.time }}.
+                    </p>
+                    <div class="flex flex-row space-x-1 mt-[0.2rem]">
+                        <p>
+                            {% if talk.slide %}
+                            [<a class="text-blue-800 hover:text-blue-800" href="{{ paper.slide }}" download>slide</a>]
+                            {% else %}
+                            <span>[slide]</span>
+                            {% endif %}
+                        </p>
+                        <p>
+                            {% if talk.video %}
+                            [<a class="text-blue-800 hover:text-blue-800" href="{{ paper.video }}" target="_blank">video</a>]
+                            {% else %}
+                            <span>[video]</span>
+                            {% endif %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

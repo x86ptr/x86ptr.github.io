@@ -1,0 +1,32 @@
+---
+layout: page
+title: Projects
+permalink: /projects/
+---
+
+<section class="projects">
+    <h1 class="font-semibold text-lg text-center">Projects</h1>
+    <p class="text-center text-[0.98rem] text-gray-500 mt-1">Below you'll find various projects I've undertaken and contributed.</p>
+    <div class="mt-8">
+        <div class="list space-y-4">
+            {% for project in site.projects %}
+            <div class="flex flex-row">
+                <div class="justify-center text-[1.4rem] -mt-[0.32rem] mr-2">•</div>
+                <div>
+                    <p>
+                        {{ project.subject }}
+                    </p>
+                    <div class="flex flex-col space-y-1 mt-[0.2rem]">
+                        <p class="text-gray-500">
+                            {{ project.description }}
+                        </p>
+                        <p>
+                            <a href="{{ project.link }}">{{ project.link }}</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

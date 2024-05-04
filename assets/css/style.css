@@ -1,0 +1,233 @@
+@font-face {
+    font-family: 'TESLA';
+    src: url('/assets/fonts/TESLA.ttf') format('truetype');
+}
+
+html,
+body {
+    font-family: "Source Sans Pro", sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #1d4ed8;
+}
+
+a:hover {
+    color: #1e40af;
+    text-decoration: underline;
+}
+
+ul,
+ol {
+    color: #434648;
+    
+}
+
+ul {
+    list-style: inside;
+}
+
+ul li:before {
+    content: "";
+    margin-left: 10px;
+}
+
+ol {
+    margin-left: 15px;
+    list-style: decimal;
+}
+
+ol li {
+  padding-left: 10px;
+}
+
+hr {
+    border-bottom: 0;
+    border-bottom-style: none;
+    border-bottom-color: currentcolor;
+    border-style: solid;
+    border-color: #ddd;
+}
+
+table {
+    margin: 10px 0;
+    width: fit-content;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    padding: (30px * 33.3333333333 * .01) (30px * .5);
+}
+
+table tr:nth-child(even) {
+    background-color: #ececec;
+}
+
+table th {
+    color: #313131;
+    text-align: left !important;
+    padding: 8px 7px 8px 7px;
+    background-color: #dfdfdf;
+    border: 1px solid #d3d3d3;
+    font-weight: 600;
+}
+
+table td {
+    padding: 8px 7px 8px 7px;
+    border: 1px solid #d3d3d3;
+}
+
+/* navbar */
+nav a.active,
+nav a.active:hover {
+    color: #1e40af;
+}
+
+section.blog ol:not(:first-of-type) {
+    padding-top: 1.15rem;
+}
+
+section.blog ol article:not(:first-of-type) div {
+    border-top: 0 !important;
+}
+
+section.blog ol article:first-of-type .fffffffff {
+    margin-top: 3.5rem;
+}
+
+/* blog post view */
+section.blog-post h1 {
+    font-weight: 600;
+    line-height: 35px;
+    margin-top: 20px;
+    font-size: 1.3rem;
+}
+
+section.blog-post h2 {
+    font-weight: 600;
+    line-height: 35px;
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+
+section.blog-post p {
+    line-height: 1.75rem;
+    color: #434648;
+    padding: 10px 0;
+    font-size: 0.98rem;
+}
+
+.post-content code.highlighter-rouge {
+    font-family: "Source Code Pro", monospace;
+    padding: 1px 3px;
+    position: relative;
+    top: -1px;
+    background-color: #eee;
+    border-radius: 2px;
+    color: rgb(209, 36, 93);
+    border: 1px solid rgba(128, 128, 128, 0.1);
+    font-size: 15px;
+}
+
+.post-content pre code {
+    font-family: "Source Code Pro", monospace;
+    width: 100%;
+    margin: 20px 0;
+    margin-top: 20px;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    font-size: 15px;
+}
+
+.post-content img {
+    max-width: 100%;
+    vertical-align: middle;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+.post-content sup {
+    border-radius: 10%;
+    top: -3px;
+    left: 2px;
+    font-size: small;
+    position: relative;
+    margin-right: 2px;
+}
+
+.post-content figure {
+    position: relative;
+}
+
+.post-content figure img {
+    border-radius: 2px;
+}
+
+.post-content figure>img {
+    display: block;
+    position: relative;
+}
+
+.post-content figure figcaption {
+    margin-top: 5px;
+    font-style: italic;
+    font-size: 14px;
+    font-size: 13px;
+    text-align: center;
+    color: #434648;
+}
+
+
+
+.post-content blockquote {
+    color: #656d76;
+    border-left: 3px solid #ccc;
+    padding-left: 10px;
+    margin: 20px 0;
+}
+
+.post-content blockquote p {
+    padding: 5px 0;
+}
+
+
+.post-content blockquote> :last-child {
+    margin-bottom: 0;
+}
+
+.post-content blockquote i,
+.post-content blockquote em {
+    font-style: normal;
+}
+
+/* 
+
+move to top button
+
+*/
+#scroll-to-top {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    transition: all 0.2 ease;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    cursor: pointer;
+    background-color: #313131;
+    color: #fff;
+    text-align: center;
+}
+
+#scroll-to-top:hover {
+    background-color: #212121;
+    text-decoration: none;
+}

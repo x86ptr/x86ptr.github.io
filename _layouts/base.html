@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="{{ site.description }}">
+		{% if page.title %}
+		<title>{{ page.title }}</title>
+		{% else %}
+		<title>{{ site.title }}</title>
+		{% endif %}
+		<link rel="apple-touch-icon" sizes="180x180" href="{{ relative_url }}/assets/favicon/apple-touch-icon.png" h>
+		<link rel="icon" type="image/png" sizes="32x32" href="{{ relative_url }}/assets/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="{{ relative_url }}/assets/favicon/favicon-16x16.png">
+		<link rel="manifest" href="{{ relative_url }}/assets/favicon/site.webmanifest">
+		<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&amp;display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="{{ relative_url }}/assets/js/highlight/styles/a11y-light.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+		<link rel="stylesheet" href="{{ relative_url }}/assets/css/output.css">
+		<link rel="stylesheet" href="{{ relative_url }}/assets/css/style.css">
+	</head>
+	<body class="bg-gray-50 text-gray-800">
+		{% include navbar.html %}
+		<main>
+			{{ content }}
+		</main>
+	</div>
+		<script src="{{ relative_url }}/assets/js/jquery.min.js"></script>
+		<script src="{{ relative_url }}/assets/js/highlight/highlight.js"></script>
+		<script src="{{ relative_url }}/assets/js/mermaid.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
+		<script src="{{ relative_url }}/assets/js/script.js"></script>
+	</body>
+</html>

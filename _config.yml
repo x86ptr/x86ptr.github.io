@@ -1,0 +1,52 @@
+title: Mehdi Karimi
+url: https://x86ptr.github.io
+baseurl: ""
+description: Computer Science and System Security Researcher
+  
+author:
+  name: Mehdi Karimi
+  avatar: /assets/images/avatar.jpg
+  affiliation: Computer Engineering Student
+  university: Payame Noor
+  university_homepage: https://www.en.pnu.ac.ir
+  bio: System Security Researcher
+  email: x86ptr@gmail.com
+  google_scholar: https://scholar.google.com/citations?user=3F-RGisAAAAJ&hl=en
+  research_gate: https://scholar.google.com/citations?user=3F-RGisAAAAJ&hl=en
+  orcid: https://orcid.org/my-orcid?orcid=0009-0003-9811-7177
+  github: https://github.com/x86ptr
+  linkedin: https://www.linkedin.com/in/x86ptr/
+  twitter: https://twitter.com/x86ptr
+  about: | 
+    I am a third-year computer engineering student at Payame Noor University. 
+    My passion for computer systems security has guided my academic objectives and led me to 
+    focus on the many areas of system security. Specifically, I delve deeply into fields 
+    such as operating system kernel security, formal methods of program analysis, 
+    vulnerability discovery through fuzzing, and the automation of exploit generation. 
+
+# papers:
+#   - title:
+#     authors:
+#     publisher:
+#     journal:
+#     publish_date:
+#     paper_link:
+#     paper:
+#     bibtex:
+#     slide:
+#     video:
+#     note:
+
+# talks:
+#   - subject:
+#     homepage:
+#     time:
+#     conference:
+#     location:
+#     slide:
+#     video:
+
+# projects:
+#   - subject:
+#     description:
+#     link:

@@ -1,0 +1,32 @@
+---
+layout: page
+title: Blog
+permalink: /blog/
+---
+
+<section class="blog">
+    <h1 class="font-semibold text-lg text-center">Blog</h1>
+    <p class="text-center text-[0.98rem] text-gray-500 mt-1">Below you'll find my latest musings and insights.</p>
+    <div class="mt-8">
+        {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
+        {% for year in postsByYear -%}
+        <ol class="relative border-s border-dashed border-gray-700 ml-4">  
+            <span class="absolute flex items-center justify-center w-10 h-10 rounded-full -start-5 select-none bg-gray-50">
+                {{ year.name }}
+            </span>
+            {% for post in year.items -%}
+            <article class="flex flex-row">
+                <div class="fffffffff flex flex-row px-4 py-2 w-full border-t border-b border-r border-dashed border-gray-700">
+                    <div class="flex items-center min-w-14 border-r border-dashed border-gray-700 mr-3">
+                        <span class="font-normal text-gray-600 text-[0.98rem]">{{ post.date | date: "%b %-d" }}</span>
+                    </div>
+                    <a class="hover:text-blue-800 text-[0.98rem] text-gray-800" href="{{ post.url | relative_url }}">
+                            {{ post.title | escape }}
+                    </a>
+                </div>
+            </article>
+            {% endfor %}
+        </ol>
+        {% endfor %}
+    </div>
+</section>

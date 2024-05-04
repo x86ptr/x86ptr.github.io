@@ -1,0 +1,63 @@
+---
+layout: page
+title: Publications
+permalink: /publications/
+---
+
+<section class="publications">
+    <h1 class="font-semibold text-lg text-center">Publications</h1>
+    <p class="text-center text-[0.98rem] text-gray-500 mt-1">Below you'll find papers I've worked on.</p>
+    <div class="mt-8">
+        <div class="list space-y-4">
+            {% for paper in site.papers %}
+            <div class="flex flex-row">
+                <div class="justify-center text-[1.4rem] -mt-[0.32rem] mr-2">•</div>
+                <div>
+                    <p>
+                        {{ paper.authors }}. 
+                        {% if paper.paper_link %}
+                        <a href="{{ paper.paper_link }}">{{ paper.title }}</a>
+                        {% else %}
+                        <span>{{ paper.title }}</span>
+                        {% endif %}
+                        {% if paper.note %}
+                        <span class="text-red-600">[{{ paper.note }}] </span>
+                        {% endif %}
+                        . In Proceedings of <i>{{ paper.publisher }}, {{ paper.journal }}</i>. {{ paper.publish_date }}.
+                    </p>
+                    <div class="flex flex-row space-x-1 mt-[0.2rem]">
+                        <p>
+                            {% if paper.paper %}
+                            [<a class="text-blue-800 hover:text-blue-800" href="{{ paper.paper }}" download>paper</a>]
+                            {% else %}
+                            <span>[paper]</span>
+                            {% endif %}
+                        </p>
+                        <p>
+                            {% if paper.bibtex %}
+                            [<a class="text-blue-800 hover:text-blue-800" href="{{ paper.bibtex }}" download>bibtex</a>]
+                            {% else %}
+                            <span>[bibtex]</span>
+                            {% endif %}
+                        </p>
+                        <p>
+                            {% if paper.slide %}
+                            [<a class="text-blue-800 hover:text-blue-800" href="{{ paper.slide }}" download>slide</a>]
+                            {% else %}
+                            <span>[slide]</span>
+                            {% endif %}
+                        </p>
+                        <p>
+                            {% if paper.video %}
+                            [<a class="text-blue-800 hover:text-blue-800" href="{{ paper.video }}" target="_blank">video</a>]
+                            {% else %}
+                            <span>[video]</span>
+                            {% endif %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

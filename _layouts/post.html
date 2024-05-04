@@ -1,0 +1,73 @@
+---
+layout: base
+---
+
+<section class="blog-post container max-w-screen-md min-h-screen mx-auto">
+    <div class="p-4">
+        <div class="post-title">
+            <h1 class="capitalize">{{ page.title | escape }}</h1>
+        </div>
+        <div class="post-metadata text-gray-500 mt-6 mb-6">
+            {%- if page.modified_date -%}
+            <i class="fas fa-clock mr-1"></i> Last updated 
+            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            <time datetime="{{ page.modified_date | date_to_xmlschema }}" itemprop="dateModified">
+                {{ page.modified_date | date: date_format }}
+            </time>
+            {% else %}
+                <i class="fas fa-calendar-alt mr-1"></i> Published on
+                {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                    {{ page.date | date: date_format }}
+                </time>
+            {%- endif -%}
+        </div>
+        <div class="post-introduction mb-6">
+            <h1>Introduction</h1>
+            <p>{{ page.introduction }}</p>
+        </div>
+        <div class="post-content">
+            {{ content }}
+        </div>
+        <div class="flex flex-row my-16 select-none">
+            {% if page.previous.url %}
+                <a class="w-1/2 text-center py-3 px-4 hover:bg-[#f1f1f1] border border-gray-300 rounded-tl-md rounded-bl-md hover:no-underline" href="{{page.previous.url}}" title="{{page.previous.title}}">Previous</a>
+            {% else %}
+                <span class="w-1/2 pagination-disabled text-gray-400 text-center cursor-not-allowed py-3 px-4 border border-gray-300 rounded-tl-md rounded-bl-md hover:no-underline">Previous</span>
+            {% endif %}
+            {% if page.next.url %}
+                <a class="w-1/2 text-center py-3 px-4 hover:bg-[#f1f1f1] border-r border-t border-b border-gray-300 rounded-tr-md rounded-br-md hover:no-underline" href="{{page.next.url}}" title="{{page.next.title}}">Next</a>
+            {% else %}
+                <span class="w-1/2 pagination-disabled text-gray-400 cursor-not-allowed text-center  py-3 px-4 border-r border-t border-b border-gray-300 rounded-tr-md rounded-br-md hover:no-underline">Next</span>
+            {% endif %}
+        </div>
+        {% if page.comment %}
+        <div class="comments mt-8">
+            <script src="https://giscus.app/client.js"
+                data-repo="x86ptr/x86ptr.github.io"
+                data-repo-id="R_kgDOLTVepQ"
+                data-category="General"
+                data-category-id="DIC_kwDOLTVepc4CeEk0"
+                data-mapping="url"
+                data-strict="0"
+                data-reactions-enabled="0"
+                data-emit-metadata="0"
+                data-input-position="bottom"
+                data-theme="light"
+                data-lang="en"
+                crossorigin="anonymous"
+                async>
+            </script>
+        </div>
+        {% endif %}
+    </div>
+    <footer class="mt-12  text-center py-8"">
+        <span class="text-gray-500 text-[14px]">© 2022 Crafted & Designed by 
+            <a href="/">Mehdi Karimi</a>.
+        </span>
+    </footer>
+</section>
+
+<a id="scroll-to-top">
+    <i class="fa fa-arrow-up mt-3" aria-hidden="true"></i>
+</a>
