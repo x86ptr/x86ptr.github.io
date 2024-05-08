@@ -23,18 +23,18 @@ author:
     such as operating system kernel security, formal methods of program analysis, 
     vulnerability discovery through fuzzing, and the automation of exploit generation. 
 
-# papers:
-#   - title:
-#     authors:
-#     publisher:
-#     journal:
-#     publish_date:
-#     paper_link:
-#     paper:
-#     bibtex:
-#     slide:
-#     video:
-#     note:
+papers:
+  - title: A Comprehensive Survey of Code-Reuse Attacks and Exploit Mitigation Mechanisms
+    authors: Mehdi Karimi
+    publisher: Springer
+    journal: Cybersecurity
+    publish_date:
+    paper_link:
+    paper:
+    bibtex:
+    slide:
+    video:
+    note: Under Preparation
 
 # talks:
 #   - subject:
