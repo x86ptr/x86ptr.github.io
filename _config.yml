@@ -19,9 +19,11 @@ author:
   about: | 
     I am a third-year computer engineering student at Payame Noor University of Iran. 
     My passion for Cybersecurity has guided my academic objectives and led me to 
-    focus on the many areas of software and system security. Specifically, I delve deeply into fields 
-    such as operating system kernel security, formal methods of program analysis, 
-    vulnerability discovery through fuzzing, and the automation of exploit generation. 
+    focus on the many areas of software and system security. Throughout my academic journey, 
+    I have developed a strong foundation in computer engineering, 
+    with a particular emphasis on the theoretical and practical aspects of software and system security. 
+    My research interests lie in the intersection of low-leevl security, where I seek to explore novel 
+    approaches to ensuring the integrity and reliability of software systems.
 
 papers:
   - title: A Comprehensive Survey of Code-Reuse Attacks and Exploit Mitigation Mechanisms
