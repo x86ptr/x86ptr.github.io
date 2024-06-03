@@ -17,13 +17,12 @@ author:
   linkedin: https://www.linkedin.com/in/x86ptr/
   twitter: https://twitter.com/x86ptr
   about: | 
-    I am a third-year computer engineering student at Payame Noor University of Iran. 
-    My passion for Cybersecurity has guided my academic objectives and led me to 
-    focus on the many areas of software and system security. Throughout my academic journey, 
-    I have developed a strong foundation in computer science, 
-    with a particular emphasis on the theoretical and practical aspects of software and system security. 
-    My research interests lie in the intersection of low-leevl security, where I seek to explore novel 
-    approaches to ensuring the integrity and reliability of software systems.
+    I am a third-year Computer Engineering student at Payame Noor University of Iran, driven by a deep passion for cybersecurity. 
+    My academic journey has been shaped by a focus on software and system security, 
+    where I have cultivated a strong foundation in both theoretical and practical aspects of computer science. 
+    My research interests lie in low-level security, where I aim to explore innovative approaches to ensure the integrity and reliability of software systems.
+
+
 
 papers:
   - title: A Comprehensive Survey of Code-Reuse Attacks and Exploit Mitigation Mechanisms
